@@ -1,0 +1,59 @@
+[build-system]
+requires = ["hatchling>=1.9.0",]
+build-backend = "hatchling.build"
+
+[project]
+name = "pydata"
+dynamic = [
+    "version",
+]
+description = "Physical Data Management - Manipulation - Mathematical operations - Saving - Plotting"
+readme = "README.rst"
+license = { file="LICENSE" }
+requires-python = ">=3.7"
+authors = [
+    { name = "Sébastien Weber", email = "sebastien.weber@cemes.fr" },
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Other Environment",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Scientific/Engineering :: Human Machine Interfaces",
+    "Topic :: Scientific/Engineering :: Visualization",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Software Development :: User Interfaces",
+]
+dependencies = [
+    #"docutils==0.17.1",
+    "multipledispatch",
+    "numpy < 2.0.0",
+    "packaging",
+    "pint",
+    "scipy",
+    "setuptools>=60",
+    "toml",
+    "tables<3.9",  # issue with some version of required package blosc2>=2.2.8
+]
+
+[project.scripts]
+
+[project.urls]
+Homepage = "http://pymodaq.cnrs.fr"
+Source = "https://github.com/PyMoDAQ/pydata"
+Tracker = "https://github.com/PyMoDAQ/pydata/issues"
+
+[tool.hatch.version]
+path = "src/pydata/resources/VERSION"
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "/src",
+]
