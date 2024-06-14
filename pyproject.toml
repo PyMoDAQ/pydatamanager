@@ -51,7 +51,7 @@ Source = "https://github.com/PyMoDAQ/pydata"
 Tracker = "https://github.com/PyMoDAQ/pydata/issues"
 
 [tool.hatch.version]
-path = "src/pydata/resources/VERSION"
+path = "src/pydatamanager/resources/VERSION"
 
 [tool.hatch.build.targets.sdist]
 include = [
