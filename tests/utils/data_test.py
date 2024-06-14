@@ -10,10 +10,13 @@ import pytest
 from pytest import approx, mark
 import time
 
-from pymodaq.utils import math_utils as mutils
-from pymodaq.utils import data as data_mod
-from pymodaq.utils.data import DataDim
-from pymodaq.post_treatment.process_to_scalar import DataProcessorFactory
+from pydatamanager.utils import math_utils as mutils
+from pydatamanager import data as data_mod
+from pydatamanager.data import DataDim
+from pydatamanager.post_treatment.process_to_scalar import DataProcessorFactory
+
+
+
 data_processors = DataProcessorFactory()
 
 LABEL = 'A Label'

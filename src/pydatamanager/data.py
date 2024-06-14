@@ -18,20 +18,23 @@ import logging
 import warnings
 from time import time
 import copy
-
 from multipledispatch import dispatch
-from pymodaq.utils.enums import BaseEnum, enum_checker
-from pymodaq.utils.messenger import deprecation_msg
-from pymodaq.utils.daq_utils import find_objects_in_list_from_attr_name_val
-from pymodaq.utils.logger import set_logger, get_module_name
-from pymodaq.utils.slicing import SpecialSlicersData
-from pymodaq.utils import math_utils as mutils
-from pymodaq.utils.config import Config
-from pymodaq.utils.plotting.plotter.plotter import PlotterFactory
+
+from pydatamanager.utils.enums import BaseEnum, enum_checker
+from pydatamanager.utils.utils import deprecation_msg
+from pydatamanager.utils.utils import find_objects_in_list_from_attr_name_val
+from pydatamanager.utils.slicing import SpecialSlicersData
+from pydatamanager.utils import math_utils as mutils
+from pydatamanager.plotting.plotter.plotter import PlotterFactory
+
+
+from pydatamanager.utils.logger import set_logger, get_module_name
+from pydatamanager.utils.config import Config
+
 
 config = Config()
 plotter_factory = PlotterFactory()
-logger = set_logger(get_module_name(__file__))
+logger = set_logger(get_module_name(__file__), logger_base_name='pydatamanager')
 
 
 def squeeze(data_array: np.ndarray, do_squeeze=True, squeeze_indexes: Tuple[int]=None) -> np.ndarray:
