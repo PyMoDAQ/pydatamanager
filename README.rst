@@ -1,7 +1,7 @@
-PyMoDAQ
-#######
+PyDataManager
+#############
 
-.. image:: https://img.shields.io/pypi/v/pydata.svg
+.. image:: https://img.shields.io/pypi/v/pydatamanager.svg
    :target: https://pypi.org/project/pydata/
    :alt: Latest Version
 

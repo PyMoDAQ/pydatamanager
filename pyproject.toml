@@ -3,7 +3,7 @@ requires = ["hatchling>=1.9.0",]
 build-backend = "hatchling.build"
 
 [project]
-name = "pydata"
+name = "pydatamanager"
 dynamic = [
     "version",
 ]
